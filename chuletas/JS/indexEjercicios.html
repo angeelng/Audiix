@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacion 4</title>
+    <script src="ejercicios.js"></script>
+
+    <style>
+        .a{
+            width: 100px;
+            border: solid black 1px;
+            background-color: rgb(25, 24, 24);
+            color: white;
+            display: block;
+            padding:3px;
+        }
+        .b{
+
+            width: 100px;
+            border: solid black 1px;
+            background-color: rgb(76, 73, 73);
+            color: white;
+            padding:3px;
+
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicio 14</h1>
+
+    <!--
+        Ejercicio 14: Modificar el ejercicio 12 (el de la imagen que se movía a derecha o izquierda)
+para que la imagen se mueva hacia la derecha mientras el ratón esté encima de ella. Cuando
+salimos de la imagen esta se debe parar.
+    -->
+    <div id="imagen12" style="position:absolute; right: 0px; left: 0px;" 
+    onmouseover="overImagen()" onmouseout="outImagen()">
+        <img src="fotoGym.jpeg" alt="">
+    </div>
+    
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    
+
+
+    <h1>Ejercicio 15</h1>
+
+    <!--
+Ejercicio 15: Usando las funciones setInterval y clearInterval         
+de Javascript. Coloca unaetiqueta meter, una etiqueta progress y un 
+botón al lado de cada una. Al 
+pulsar el botón se debe
+simular la “carga” de la barrita. Muestra un mensaje cuando se alcance el máximo.
+    -->
+    <meter value="0" min="0" max="100" id="descarga" style="width: 200px; height: 20px;"></meter> 
+    <button onclick="descargar(this)">Descargar</button>
+    <progress id="descarga2" value="0" max="100" style="width: 200px; height: 20px;"></progress> 
+    <button onclick="cargar(this)">Cargar</button>
+
+    <h1>Ejercicio 16</h1>
+
+    <!--
+        Ejercicio 16: Carrera de DIVS
+Coloca 4 divs de 100x100px y color de fondo distinto en la parte izquierda de la pantalla (uno
+debajo de otro). Crea un botón que se llame CORRER y al pulsarlo, los divs se moverán hacia
+la derecha de la pantalla de manera automática. Cada DIV debe moverse a una velocidad
+aleatoria que cambiará en cada carrera. El primer DIV que llegue a la derecha de la pantalla,
+gana. Nota: realiza el cálculo a ojo, ya aprenderemos a obtener las medidas de la página
+correctamente. Coloca otro botón para resetear todo y volver a comenzar la carrera.
+Nota: Usar posiciones absolutas
+    -->
+
+    <div class="corredor" style="position:absolute; width: 100px; height: 100px; background-color: red; left: 0px;"></div><br><br><br><br><br><br><br>
+    <div class="corredor" style="width: 100px;position:absolute; height: 100px; background-color: blue; left: 0px;"></div><br><br><br><br><br><br><br>
+    <div class="corredor" style="width: 100px; height: 100px;position:absolute; background-color: green; left: 0px;"></div><br><br><br><br><br><br><br>
+    <div class="corredor" style="width: 100px; height: 100px; background-color: black;position:absolute; left: 0px;"></div><br><br><br><br><br><br><br>
+
+    <button id="btn1" onclick="correr(this)">Correr</button>
+    <button onclick="reset('btn1')">Reset</button>
+
+
+    <h1>Ejercicio 17</h1>
+
+    <!--    
+        Ejercicio 17: Modifica el ejercicio 15 de esta relación de la siguiente forma:
+
+        • Usa sólo el elemento progress y el botón que se encarga de realizar el
+        funcionamiento explicado en el ejercicio 16. Cambia el nombre del botón por
+        “Generar moneda”
+        • Crea usando HTML un div en la parte superior izquierda llamado MONEDAS, cuyo
+        contenido inicial será el número 0.
+
+        • Cada vez que se pulse sobre el botón ‘Generar moneda’, se bloqueará dicho botón
+        y se cargará la barra de progress como se vio en el ejercicio 15.
+
+        • Al terminar la carga, se sumará una moneda al contenido del div MONEDAS y se
+        desbloqueará el botón ‘Generar Moneda’.
+    -->
+    <div id="monedas">0</div>
+    <progress id="ej17" value="0" min="0" max="100" style="width: 200px; height: 20px;"></progress> 
+    <button onclick="ej17(this)">Generar Moneda</button>
+
+
+    <h1>Ejercicio 18</h1>
+
+    <!--
+        Ejercicio 18: Crear un menú vertical con efecto acordeón usando los siguientes apartados
+        (display none, block):
+        • Inicio
+        ◦ Portada.
+        ◦ Acerca de mí.
+        ◦ Mis fotos.
+        • Proyectos
+        ◦ Web Apps.
+        ◦ Mobile Apps.
+        ◦ Juegos.
+        • Porfolio
+        ◦ Páginas webs.
+        ◦ Software.
+        • Contacto
+        A tener en cuenta:
+        • El menú debe tener una maquetación en CSS.
+        • Los subapartados permanecen ocultos hasta que se pulsa sobre el apartado
+        correspondiente.
+        • Al abrir un bloque de subapartados, se cierran los demás.
+
+    -->
+
+    <div>
+        <div class="a" onclick="expandir('aa')">
+            Inicio
+        </div>
+        
+        <div class="b aa">
+            Portada
+        </div>
+        <div class="b aa">
+            Acerca de mí
+        </div>
+        <div class="b aa">
+            Daniela
+        </div>
+        <div class="b aa">
+            Roberto
+        </div>
+
+
+        <div class="a" onclick="expandir('bb')">
+            Proyectos
+        </div>
+        
+        <div class="b bb">
+            Web
+        </div>
+        <div class="b bb">
+            Nose ya
+        </div>
+
+    </div>
+
+    <br><br>
+
+    
+</body>
+</html>

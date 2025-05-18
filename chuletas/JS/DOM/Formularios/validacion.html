@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validacion.js"></script>
+</head>
+<body>
+    <form action="proceso.php" id="miFormulario" method="get">
+        Usuario: <input type="text" id="usuario" name="usuario">
+        Password: <input type="text" id="password" name="password">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <form action="proceso.php" id="miFormulario2" method="get">
+        <p>Seleccione al menos una opción</p>
+        <input type="checkbox" name="opcion" value="1" id="">Opción 1: <br>
+        <input type="checkbox" name="opcion" value="2" id="">Opción 2: <br>
+        <input type="checkbox" name="opcion" value="3" id="">Opción 3: <br>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <form action="proceso.php" id="dni">
+        DNI: <input type="text" id="dni">
+        <input type="submit" value="Enviar">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+    <script src="ejerciciosNodos.js"></script>
+
+    <style>
+      .clase1 {
+        border: 1px;
+        font-size: 100%;
+      }
+
+      .clase2 {
+        border: 3px;
+        font-size: 80%;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 1</h1>
+    <ul id="ula">
+      <li>elemento 1</li>
+      <li>elemento 2</li>
+      <li>elemento 3</li>
+    </ul>
+    <button onclick="anadir()">Añadir</button>
+    <h1>Ejercicio 2</h1>
+    <p id="primero" class="clase1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam soluta
+      earum repellendus modi iste ab ratione vero numquam repellat molestiae,
+      cum fugiat assumenda ipsam esse, quod tempora nihil eligendi. Similique!
+    </p>
+
+    <button onclick="generar()">Generar</button>
+    <button onclick="borrarViejo()" id="BV">Borrar Viejo</button>
+    <button onclick="borrarNuevo()" id="BN" disabled>Borrar Nuevos</button>
+    <button onclick="susti()" id="sus">Sustituir</button>
+    <h1>Ejercicio 3</h1>
+    <button onclick="crearTabla()">Crea tablas</button>
+    <h1>Ejercicio 4</h1>
+    <div id="divlista">
+      <ul></ul>
+    </div>
+    <div>
+      <button onclick="agregar()">Agregar</button>
+      <button onclick="borrar()">Borrar</button>
+    </div>
+  </body>
+</html>

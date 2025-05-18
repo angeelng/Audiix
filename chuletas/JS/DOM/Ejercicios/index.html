@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="miScript.js"></script>
+    <style>
+        .uno{
+            color: aqua;
+        }
+
+        .dos{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <a href="https://www.google.com/" id="enlace">Ir a google</a>
+    <button onclick="mostrarAlert()">Primer botón</button>
+    <button onclick="cambiarUrl()">Segundo botón</button>
+    <h1>Ejercicio 2</h1>
+    <button onclick="mostrarMedidas()">Mostrar medidas</button>
+    <button onclick="mostrarBorde()">Mostrar borde y pedir nueva medida</button>
+    <button onclick="cambiarAlineacion()">Cambiar alineación</button>
+    <br><br>
+    <table id="tabla1" border="1" width="300px" height="300px" align = "center">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+
+    <br>       
+<h1>Ejercicio 3</h1>
+    <div id="div1">
+        0
+    </div>
+
+    <br>
+
+    <button onclick="sumar()">Sumar</button>
+    <button onclick="restar()">Restar</button>
+    <h1>Ejercicio 4</h1>
+        <img src="Images/seccion-equipo.jpg" alt="imagenes" width="200px" id="galeria">
+        <br>
+        <button onclick="avanzarImagen()" id="avanzar">Avanzar</button>
+        <button onclick="retrocederImagen()" id="retroceder">Retroceder</button>
+        <h1>Ejercicio 5</h1>
+    <p id="cambiarParrafo" class="uno" onclick="cambiarParrafo()">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h1>Ejercicio 6</h1>
+        <button onclick="cambiarColor(this)" value="green">Verde</button>
+        <button onclick="cambiarColor(this)" value="red">Rojo</button>
+        <button onclick="cambiarColor(this)" value="pink">Rosa</button>
+        <button onclick="cambiarColor(this)" value="yellow">Amarillo</button>
+        <button onclick="cambiarColor(this)" value="blue">Azul</button>
+    <h1>Ejercicio 7</h1>
+    <br><br>
+    <table id="tabla1" border="1" width="400px" height="400px" align = "center">
+        <tr>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+            <td onclick="cambiarFondo(this)"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <h1>Ejercicio 9</h1>
+    <p id="cambiarParrafo" class="uno" onclick="cambiarParrafo()">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h1>Ejercicio 10</h1>
+
+    <div style="width: 100px; height: 100px; background-color: blue;" onmouseover="ej10(this)" onmouseout="salirDiv()">
+
+    </div>
+    <div style="width: 100px; height: 100px; background-color: green;" onmouseover="ej10(this)" onmouseout="salirDiv()">
+
+    </div>
+    <div style="width: 100px; height: 100px; background-color: pink;" onmouseover="ej10(this)" onmouseout="salirDiv()">
+
+    </div>
+
+    <h1>Ejercicio 11</h1>
+    <div style="width: 300; height: 100px;  background-color: blue;"  onmouseover="mostrarDiv()">
+        Soy el div 1
+    </div>
+
+    <div style="width: 300; height: 100px;  background-color: green; visibility:hidden; display: none; position: absolute;" id="div2">
+        Soy el div 2
+    </div>
+    <div style="width: 300; height: 100px;  background-color: pink;" >
+        Soy el div 3
+    </div>
+
+    <h1>Ejercicio 12</h1>
+    <button onclick="moverDivIzquierda()">Izquierda</button>
+    <button onclick="moverDivDerecha()">Derecha</button>
+    <button onclick="resetearPos()">Resetear posición</button>
+    <div onmouseover="mover()" onmouseout="parar()" style="position: absolute; left: 100px; right: 100px;" id="imagen" >
+        <img src="Images/seccion-ninio.jpg" style="width: 500px;" >
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <h1>Ejercicio 15</h1>
+    <meter value="100"></meter> 
+    <button onclick="ejercicio15descargar()">Descargar</button>
+    <progress id="barra" value="0" max="100">700%</progress>
+    <button onclick="cargar()" id="cargar">Cargar</button>
+    <h1>Ejercicio 16</h1>
+    <div style="width: 100px; height: 100px; background-color: aqua; position: absolute;" id="d1">
+        
+    </div>
+    <br><br><br><br><br><br>
+    <div style="width: 100px; height: 100px; background-color: rebeccapurple; position: absolute;" id="d2">
+        
+    </div>
+    <br><br><br><br><br><br>
+    <div style="width: 100px; height: 100px; background-color: burlywood; position: absolute;" id="d3">
+        
+    </div>
+    <br><br><br><br><br><br>
+    <div style="width: 100px; height: 100px; background-color: palevioletred; position: absolute;" id="d4">
+        
+    </div>
+    <br><br><br><br><br><br>
+    <button onclick="empezarCarrera()" id="botonCorrer">Correr</button>
+
+</body>
+</html>

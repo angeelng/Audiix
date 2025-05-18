@@ -1,0 +1,192 @@
+window.onload = function(){
+
+    //Ejercicio 1
+    let texto  = document.querySelector("#form1 > #texto");
+    texto.oninput = function(){
+        document.querySelector("#form1 > #copy").value = texto.value;
+    }
+
+
+    //Ejercicio 2
+    let btn  = document.querySelector("#btn2");
+    btn.onclick = function(){
+        let checks = document.getElementsByName("aficiones");
+        let texto = []
+        for(i=0;i<checks.length;i++){
+            if(checks[i].checked) texto.push(checks[i].value);
+        }
+        document.getElementById("area").value = texto.join(",");
+    }
+
+    //Apartado b
+    let checks = document.getElementsByName("aficiones");
+    let textArea = document.getElementById("area");
+    for(i=0;i<checks.length;i++){
+        checks[i].onclick = function(){
+            let texto = []
+            for(i=0;i<checks.length;i++){
+                if(checks[i].checked) texto.push(checks[i].value);
+            }
+            document.getElementById("area").value = texto.join(",");
+        }
+    }
+
+    //Ejercicio 3
+    document.getElementById("btn3").onclick = function(){
+        let dolar = document.querySelector("#form3 > #dolar");
+        let euro = document.querySelector("#form3 > #euro");
+
+        euro.value = parseFloat(dolar.value) * 0.83;
+    }
+
+    document.getElementById("btn4").onclick = function(){
+        let dolar = document.querySelector("#form4 > #dolar");
+        let euro = document.querySelector("#form4 > #euro");
+
+        dolar.value = parseFloat(euro.value) / 0.83;
+    }
+
+    document.getElementById("btn5").onclick = function(){
+        let dolar = document.querySelector("#form5 > #dolar");
+        let euro = document.querySelector("#form5 > #euro");
+        let select = document.querySelector("#form5 > #select");
+
+        if(select.value=="dolar"){
+            dolar.value = (parseFloat(euro.value) / 0.83)+"$";
+
+        }
+        else{
+            euro.value = (parseFloat(dolar.value) * 0.83)+"€";
+
+        }
+        
+
+    }
+
+
+    
+
+    //Ejercicio 4
+    let opciones = document.getElementsByName("pais");
+    for(i=0;i<opciones.length;i++){
+        opciones[i].onclick = function(){
+            if(this.checked){
+                let option = document.createElement("option");
+                option.setAttribute("value",this.value);
+                option.appendChild(document.createTextNode(this.value));
+                document.getElementById("seleccion").appendChild(option);
+            }
+            else{
+
+
+
+            }
+            
+        }
+    }
+
+    // Ejercicio 5
+    let textArea2 = document.getElementById("textArea2");
+    document.getElementById("btn_ej5").onclick = function(){
+
+        let div = document.createElement("div");
+        div.setAttribute("class","sol");
+
+        let texto = textArea2.value;
+        if(textArea2.value.length>50){
+            texto =  texto.slice(0,50);
+        }
+
+        console.log(texto.length);
+
+        div.appendChild(document.createTextNode(texto));
+        document.getElementById("solucion").appendChild(div);
+
+        textArea2.value = "";
+
+
+    }
+
+    //c
+    textArea2.oninput = function(){
+
+        if(textArea2.value.length<=100){
+            document.getElementById("cont").textContent = textArea2.value.length;
+
+
+        }
+        else{
+            textArea2.value = textArea2.value.slice(0,100);
+        }
+
+    }
+
+    // Ejercicio 6
+    let div = document.getElementById("ej6");
+    let radio = document.querySelectorAll("#form_ej6 > input[type=radio]");
+    for(i=0;i<radio.length;i++){
+        radio[i].onclick = function(){
+            div.style.backgroundColor = ""+this.value;
+        }
+    }
+
+    let selec = document.getElementById("selector");
+    selec.onchange = function(){
+        div.style.backgroundColor = this.value;
+    }
+    
+    //Ejercicio 7
+    let dni = document.getElementById("dni");
+    let patron = /^[0-9]{8}[A-Z]{1}$/; // \d
+    let valores = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+
+    dni.onblur = function(){
+        
+        if(patron.test(this.value)){
+            let numeros = parseInt(this.value.slice(0,8));
+            let letra = this.value.slice(8);
+
+            let resto = numeros%23;
+
+            if(letra === valores[resto]){
+                alert("El DNI es correcto!")
+            }
+            else{
+                alert("La letra esta mal, deberia de ser: " + valores[resto])
+            }
+        }
+        else{
+            alert("El formato introducido esta mal (8 digitos y 1 letra)");
+        }
+        
+    }
+
+
+    // Ejercicio 8
+
+    let lista1 = document.getElementById("lista1")
+    let lista2 = document.getElementById("lista2")
+    let valoress = {
+        "Intel" : ["HD 3000", "HD 4000", "IRIS 600"],
+        "AMD" : ["RX Series 500", "Vega Series", "RX Series 6000"],
+        "Nvidia" : ["GTX Serie 1000", "GTX Serie 2000", "GTX Serie 3000"],
+    }
+
+    lista1.onchange = function(){
+
+        lista2.innerHTML = "";
+
+        for(i=0;i<valoress[this.value].length;i++){
+
+            let opt = document.createElement("option");
+            opt.setAttribute("value",valoress[this.value][i]);
+            opt.appendChild(document.createTextNode(valoress[this.value][i]));
+
+            lista2.appendChild(opt);
+
+        }
+
+
+    }
+
+}

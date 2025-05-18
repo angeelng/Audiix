@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" type="text/css" href="estilos3.css">
+    <script src="miScript.js"></script>
+</head>
+<body>
+    <h2>Seleccionar y Mostrar Imagen</h2>
+    <p>Escoge una imagen utilizando la lista desplegable o los botones de opción:</p>
+
+    Selecciona una imagen:
+    <select id="imageSelect">
+        <option value=""></option>
+        <option value="JS.png">JS</option>
+        <option value="HTML.png">HTML</option>
+        <option value="CSS.png">CSS</option>
+    </select>
+
+    <p>Elige una opción:</p>
+    <input type="radio" name="imageOption" value="JS.png"> JS
+    <br>
+    <input type="radio" name="imageOption" value="HTML.png"> HTML
+    <br>
+    <input type="radio" name="imageOption" value="CSS.png"> CSS
+
+    <br>
+
+    <div id="imageContainer">
+        <p>No se ha seleccionado ninguna imagen.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="miScript.js"></script>
+    <style>
+        .uno{
+            background-color: red;
+            color: black;
+            width: 500px;
+            border: solid 10px;
+        }
+        .dos{
+            background-color: black;
+            color: red;
+            width: 300px;
+            border: solid 1px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--Ejercicio 1: Crea un enlace que vaya a google. Crea dos botones junto al enlace: 
+• Al pulsar el primero, muestra en un alert la URL a dónde va el enlace y su texto. 
+• Al pulsar el segundo, cambia la URL a otra diferente y su texto por “he cambiado” -->
+    <h1>EJERCICIO 1</h1>
+    <a href="https://instituto.medac.es/" id="enlace1">Enlace a MEDAC</a> 
+    <button onclick="mostrarURL()">Mostrar URL</button>
+    <button onclick="cambiarURL()">Cambiar URL</button>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Ejercicio 2: Crea tres botones y a continuación crea una tabla en de 4 filas y 4 columnas. 
+Usando atributos HTML, coloca un borde, unas medidas de 300x300px y una alineación al 
+centro. Al pulsar sobre los botones: 
+
+• El primero muestra en un alert los valores de anchura y altura de la tabla, pide unos valores 
+nuevos para cada propiedad y los aplica a la tabla. ¿se aplican correctamente los valores? 
+¿Falla alguno? 
+
+• El segundo muestra en un alert el valor actual del borde de la tabla y solicita un valor nuevo 
+para aplicarlo. ¿Funciona correctamente el nuevo valor? 
+
+• El tercer botón va a cambiar la alineación de la tabla cada vez que se pulse. Es decir, si la 
+tabla está alineada al centro, al pulsar el botón, la tabla quedará alineada a la derecha. Si se 
+pulsa el botón otra vez, se alineará a la izquierda y si vuelvo a pulsarlo, la tabla se pondrá 
+en el centro.-->
+
+    <div align="center">
+        <button onclick="mostrarTamaño()">Mostrar altura y anchura</button>
+        <button onclick="muestraBorde()">Mostrar borde</button>
+        <button onclick="cambiarAlineacion()">Cambia la alineacion</button>
+    </div>
+    
+    <br>
+
+    <table id="tabla1" border="solid" height="300px" width="300px" align="center">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br><br><br>
+
+    <!--    
+    Ejercicio 3: Crea un DIV con el número 0 en su interior. Bajo el DIV, coloca dos botones: uno
+para sumar y otro para restar.
+• Si se pulsa el botón para sumar, se incrementa en uno el número que hay en el DIV en ese
+momento.
+    
+• Si se pulsa el botón restar, se decrementa en uno el número que hay en el DIV en ese
+momento.
+    
+    -->
+
+    <div id="ej3">
+        0
+    </div>
+
+    <button  onclick="sumar()">Sumar</button>
+    <button onclick="restar()">Restar</button>
+
+
+
+
+
+<!--
+    Ejercicio 4: Crea una galería de fotos (al menos 5 fotos) que posea un botón para avanzar y
+otro para retroceder.
+• El botón para avanzar hará que se muestre la siguiente foto cada vez que se pulse. Si se
+llega al final de la lista de imágenes, el botón deja de funcionar.
+• El botón para retroceder hará que se muestre la foto anterior cada vez que se pulse. Si se
+llega al principio de la lista de imágenes, el botón deja de funcionar.
+b) Mejorar el ejercicio haciendo que el botón correspondiente se deshabilite cuando se
+alcanza el final/principio de la lista de fotos.
+-->
+
+<br><br><br>
+
+<img src="fotoGym.jpeg" alt="" width="250" height="150" id="imagenes">
+
+<button onclick="siguiente()" id="boton_siguiente">Siguiente</button>
+<button onclick="atras()" id="boton_atras" disabled>Atras</button>
+
+<br><br><br>
+
+
+
+<!--
+Ejercicio 5: Crea un párrafo en HTML y ponle la clase “uno”. Usando CSS, coloca un fondo,
+un borde, una anchura y un color/tam de letra para esa clase. Crea la clase “dos” similar a la
+clase “uno” pero con valores diferentes.
+a) Cuando se haga click sobre el párrafo, cambia de la clase “uno” a la clase “dos”.
+b) Cada vez que haga click en el párrafo, cambia de clase alternativamente.
+
+-->
+
+<p class="uno" onclick="cambiar_p()" id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, molestiae libero perspiciatis possimus provident aut fugiat doloribus labore et iusto quos voluptatibus, officia veritatis atque cupiditate. Sed aliquid dolore perferendis.</p>
+
+<br><br><br>
+
+<!--REDACCION 2-->
+
+
+<!--
+Ejercicio 6: Crea cinco botones y coloca como value un color diferente a cada uno. Cada vez
+que se pulse uno de los botones, el fondo de la página debe cambiar al color indicado por ese
+botón. Usar: document.body.style.backgroundColor para cambiar el color del fondo
+-->
+
+<button value="red" onclick="cambiarFondo(this)">Rojo</button>
+<button value="blue" onclick="cambiarFondo(this)">Azul</button>
+<button value="black" onclick="cambiarFondo(this)">Negro</button>
+<button value="gray" onclick="cambiarFondo(this)">Gris</button>
+<button value="yellow" onclick="cambiarFondo(this)">Amarillo</button>
+
+<br><br><br>
+
+<!--
+Ejercicio 7: Crea una tabla con 4 filas y 4 celdas por fila. Usando atributos de HTML, coloca
+un borde y un tamaño de 400x400px y deja el fondo en blanco.
+a) Crea el código Javascript necesario para que cada vez que se pulse sobre una celda, esa
+celda se vuelva de color negro. (Nota: habrá que usar this). celda.style.backgroundColor
+b) Mejora el ejercicio anterior para que cada vez que se pulse sobre una celda, esta cambie
+a negro o a blanco alternativamente según corresponda.
+c) Super mejora: define una lista de 4 colores y ahora cada vez que se pulsa sobre una celda,
+esta va cambiando de color siguiendo la lista de colores definida (si llega al final de la lista,
+vuelve al principio).
+-->
+
+<table id="tabla1" border="solid" height="400px" width="400px" align="center" >
+    <tr>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        
+    </tr>
+
+    <tr>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+    </tr>
+    <tr>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+    </tr>
+    <tr>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+        <td onclick="cambiarCelda(this)"></td>
+    </tr>
+</table>
+<br><br><br>
+<!--
+
+Ejercicio 8: Implementa el efecto ROLLOVER sobre una imagen: al pasar el ratón por
+encima, cambia la imagen. Al sacar el cursor fuera, la imagen vuelve a su estado original.
+-->
+
+<img src="fotoGym.jpeg" alt="" onmouseover="cambiarImagen(this)" onmouseout="salirImagen(this)">
+
+
+<!--RELACION DE EJERCICIOS 3-->
+
+<!--
+Ejercicio 9: Repite el apartado a) del ejercicio 5 de esta relación, pero esta vez no uses clases
+(toca directamente todas las propiedades CSS que necesites).
+-->
+<h3>Ej 9</h3>
+<p class="uno" onclick="cambiarEj9(this)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, molestiae libero perspiciatis possimus provident aut fugiat doloribus labore et iusto quos voluptatibus, officia veritatis atque cupiditate. Sed aliquid dolore perferendis.</p>
+
+
+
+<h3>Ejercicio 10</h3>
+<!--
+Ejercicio 10: Crea tres DIV de tamaño 100x100px y con un color de fondo diferente cada uno.
+Al pasar por encima de alguno de esos DIVs, el color de fondo de la página debe cambiar al
+color que tenga el DIV sobre el que está el cursor del ratón
+b) Añade el código necesario para que el color de la página vuelva a su color original si el
+cursor del ratón no está encima de ninguno de los DIVs del ejercicio.
+-->
+
+<div style="width: 100px; background-color: red;" onmouseover="cambiarColor('pink')" onmouseout="volverColor('white')">COLOR AAAAAAA</div>
+<div style="width: 100px; background-color: yellow;" onmouseover="cambiarColor('black')" onmouseout="volverColor('white')">COLOR AAAAAAA</div>
+<div style="width: 100px; background-color: blue;" onmouseover="cambiarColor('grey')" onmouseout="volverColor('white')">COLOR AAAAAAA</div>
+
+<br><br><br>
+
+<h3>Ejercicio 11</h3>
+<!--
+Ejercicio 11: Crea tres DIV de tamaño 300x100px con un color de fondo distinto cada uno y
+con un texto en su interior que indique “Soy el DIV X” (siendo X un número del uno al tres).
+
+
+
+a) Oculta el segundo DIV usando la propiedad visibility de CSS. Consigue que ese DIV
+“vuelva a aparecer” sí y solo sí, el cursor del ratón se coloca en el primer DIV.
+-->
+
+
+<h5>A:</h5>
+<div style="width: 300px; height: 100px; background-color: red;" onmouseover="mostrarDiv()">SOY EL DIV 1</div>
+<div id="oculto" style="width: 300px; height: 100px; visibility:hidden; background-color: yellow;" >SOY EL DIV 2</div>
+<div style="width: 300px; height: 100px; background-color: blue;">SOY EL DIV 3</div>
+<!---
+b) Oculta el segundo DIV usando la propiedad display de CSS. Consigue que ese DIV “vuelva
+a aparecer” sí y solo sí, el cursor del ratón se coloca en el primer DIV.
+-->
+<br>
+<h5>B:</h5>
+<div style="width: 300px; height: 100px; background-color: red;" onmouseover="mostrarDiv2()">SOY EL DIV 1</div>
+<div id="oculto2" style="width: 300px; height: 100px; display:none; background-color: yellow;" >SOY EL DIV 2</div>
+<div style="width: 300px; height: 100px; background-color: blue;">SOY EL DIV 3</div>
+
+<br><br><br>
+
+<!--
+Ejercicio 12: Coloca una imagen dentro de un DIV con position: absolute. Crea dos botones:
+• Al pulsar uno de ellos la imagen debe moverse 5px hacia la derecha de la pantalla.
+• Al pulsar el otro, la imagen debe moverse 5px hacia la izquierda de la pantalla.
+Nota: Recuerda la posición (0,0) de la página web al usar top/left/right/bottom
+b) Mejora el ejercicio haciendo que la imagen no pueda salirse de los límites de la pantalla.
+Nota: realiza el cálculo a ojo, ya aprenderemos a obtener las medidas de la página
+correctamente.
+c) Coloca un botón para resetear los valores de posición de la imagen.
+-->
+<h5>EJERCICIO 12</h5>
+<div id="imagen12" style="position:absolute; right: 0px; left: 0px;" onclick="ver(this)" >
+    <img src="fotoGym.jpeg" alt=""  >
+</div>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<button onclick="moverIzquierda('imagen12')">Mover izquierda</button>
+<button onclick="moverDerecha('imagen12')">Mover derecha</button>
+<button onclick="resetear('imagen12')">Resetear</button>
+
+
+<br><br><br><br>
+
+<!--
+Ejercicio 13: Crea el efecto SPOILER que se puede ver en foros y otras páginas. Se oculta el
+contenido de un elemento (pej, un párrafo) y sólo se muestra el mensaje “Mostrar”. Al hacer
+click sobre dicho mensaje, se muestra el contenido del elemento y el mensaje cambia a
+“Ocultar”. Si se pulsa sobre ese mensaje, el elemento vuelve a su estado original (contenido
+oculto y mensaje “Mostrar”).
+-->
+
+<p id="parrafo" style="visibility:hidden;">Hola Roberto que tal!! </p><button onclick="mostrarSpoiler(this,'parrafo')">Mostrar</button>
+
+</body>
+</html>

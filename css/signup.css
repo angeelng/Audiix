@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "League Spartan";
+    src: url(../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+html{
+    background-color: black;
+    font-family: "League Spartan";
+    height: 100%;
+    color: #f1efe7;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/background-signup.jpg");
+    background-size: cover;
+}
+
+.signUp {
+    display: grid;
+    justify-items: center;
+
+}
+
+.form-signup{
+    color: black;
+    display: grid;
+    justify-content: center;
+    width: 500px;
+    height: 450px;
+    background-color: #f1efe7;
+    border-radius: 20px;
+            box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+input, select{
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+}
+
+#button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+span{
+    color: red;
+}
+

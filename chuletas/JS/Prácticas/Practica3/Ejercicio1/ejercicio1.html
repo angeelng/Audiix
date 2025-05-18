@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Moneda</title>
+    <link rel="stylesheet" type="text/css" href="estilos1.css">
+    <script src="miScript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <progress id="meter" value="0" max="100"></progress>
+
+        <button id="coinButton" onclick="iniciarCarga(this)">Moneda</button>
+
+        <div class="indicator">
+            Monedas: <span id="coinCount">0</span>
+        </div>
+
+        <article id="imageContainer">
+            <!-- Aquí se añadirá la imagen cuando se cumpla la condición -->
+        </article>
+    </div>
+</body>
+</html>

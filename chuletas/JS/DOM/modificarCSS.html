@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="modificarCSS.js"></script>
+    <style>
+        div{
+            width: 500px;
+            height: 100px;
+            color: black;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: lightblue;
+        }
+    </style>
+  </head>
+  <body>
+    <p
+      id="miParrafo"
+      style="
+        color: black;
+        font-size: 16px;
+        padding: 10px;
+        background-color: white;
+      "
+      onclick="cambiarEstilo(this)"
+    >
+      Párrafo como estilo inicial
+    </p>
+
+    <div>Modifica mi estilo</div>
+    <div>
+        <button onclick="cambiarColorFondo()">Cambiar color de fondo</button>
+        <button onclick="cambiarFuente()">Cambiar fuente</button>
+    </div>
+  </body>
+</html>

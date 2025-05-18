@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="miScript.js"></script>
+</head>
+<body>
+    <form action="registro.php" method="post" name="form1" id="cuenta1">
+        Username: <input type="text" name="username" value="Usuario Ejemplo"><br>
+        Password: <input type="password" name="password" value="Password Ejemplo"><br>
+        <button id="boton" type="button">Enviar</button>
+        <button id="botonBorrar" type="button">Borrar</button>
+        <!--
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+        -->
+    </form>
+
+    <form action="registro.php" method="post" name="form2" id="cuenta2">
+        Username: <input type="text" name="username2" ><br>
+        Password: <input type="password" name="password2"><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+    
+    <form action="">
+        Nombre: <input type="text" name="nombre" id=""><br>
+        Nombre Copia: <input type="text" name="copia" readonly>
+    </form>
+    <button id="btnCopiar">Copiar</button>
+
+    <form action="">
+        <input id="casilla" type="checkbox" name="agree" value="si">Estoy de acuerdo
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p>Seleccionar idioma</p>
+    <input type="checkbox" name="language" value="Cplus" checked>C++
+    <br>
+    <input type="checkbox" name="language" value="python">Python
+    <br>
+    <input type="checkbox" name="language" value="java"> Java 
+    <p>
+        <button id="btn">Lenguajes Seleccionados</button>
+        <button id="marcar">Marcar</button>
+    </p>
+
+    <form action="">
+        <textarea name="textarea" id="textarea"></textarea>
+        <p id="contador">Caracteres: 0</p>
+    </form>
+
+    <select name="aficiones" id="aficiones" multiple>
+        <option value="futbol">futbol</option>
+        <option value="musica">Música</option>
+        <option value="lectura">Lectura</option>
+    </select>
+    <button id="mostrar">Mostrar selección</button>
+
+    <form action="">
+        <input type="radio" name="color" id="rojo">Rojo <br>
+        <input type="radio" name="color" id="verde">Verde <br>
+        <input type="radio" name="color" id="azul">Azul <br>
+
+    </form>
+    <button id="boton2">Mostrar</button>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejercicios1.js"></script>
+</head>
+<body>
+    <h2>Ejercicio 1</h2>
+    <form action="" id="form1">
+        Escribir:<input type="text" id="texto">
+        <br>
+        Copiando:<input type="text" readonly id="copy">
+    </form>
+    
+    <h2>Ejercicio 2</h2>
+    <form action="" id="form2">
+        <input type="checkbox" name="aficiones" value="entrenar">Entrenar
+        <input type="checkbox" name="aficiones" value="leer">Leer
+        <input type="checkbox" name="aficiones" value="jugar">Jugar
+        <br>
+        <textarea name="textArea" id="area"></textarea>
+        <br>
+        <button type="button" id="btn2">Hacer</button>
+    </form>
+
+    <h2>Ejercicio 3</h2>
+    <form action="" id="form3">
+        <input type="text" id="dolar" placeholder="Dime en dolar">
+        <input type="text" id="euro" placeholder="Devuelve en euros">
+        <button type="button" id="btn3">Hacer de $ a €</button>
+    </form>
+    <form action="" id="form4">
+        <input type="text" id="euro" placeholder="Devuelve en euros">
+        <input type="text" id="dolar" placeholder="Dime en dolar">
+
+        <button type="button" id="btn4">Hacer de € a $</button>
+    </form>
+
+    <h3>Mejora del 3</h3>
+    <form action="" id="form5">
+        <select name="select" id="select">
+            <option value="dolar">De euro a dolar</option>
+            <option value="euro">De dolar a euro</option>
+        </select>
+        <input type="text" id="euro" placeholder="Dime en euros">
+        <input type="text" id="dolar" placeholder="Dime en dolar">
+
+        <button type="button" id="btn5">Convertir</button>
+    </form>
+
+    <h2>Ejercicio 4</h2>
+    <form action="" id="form6">
+        <input type="checkbox" name="pais" id="" value="españa">
+        <input type="checkbox" name="pais" id="" value="rusia">
+        <input type="checkbox" name="pais" id="" value="italia">
+
+        <br>
+
+        <select name="" id="seleccion">
+
+        </select>
+    </form>
+
+    <style>
+        .sol{
+            background-color: red;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+    <h2>Ejercicio 5</h2>
+    <form action="" id="form_ej5">
+        <textarea name="" id="textArea2"></textarea> <div id="cont"></div>
+        <div id="solucion">
+
+        </div>
+
+        <button id="btn_ej5" type="button">Publicar</button>
+
+    </form>
+
+    <h2>Ejercicio 6</h2>
+    <div id="ej6" style="width: 200px; height: 200px; background-color: red;">
+
+    </div>
+    <form action="" id="form_ej6">
+        
+        <input type="radio" value="red" name="color">Red
+        <input type="radio" value="blue" name="color">Blue
+        <input type="radio" value="green" name="color">Green
+
+        <select id="selector">
+            <option value="pink">Rosa</option>
+            <option value="lightblue">Azul claro</option>
+            <option value="orange">Naranja</option>
+        </select>
+    </form>
+
+
+    <h2>Ejercicio 7</h2>
+    <form action="" id="form_ej7">
+        <input type="text" name="" id="dni" placeholder="DNI">
+
+
+
+    </form>
+
+
+    <h2>Ejercicio 8</h2>
+    <form action="" id="form_ej8">
+        
+        <select name="" id="lista1">
+            <option selected disabled hidden>---Elige una---</option>
+            <option value="Intel">Intel</option>
+            <option value="AMD">AMD</option>
+            <option value="Nvidia">Nvidia</option>
+        </select>
+        <br>
+        <select name="" id="lista2">
+
+        </select>
+        <br>
+        <input type="button" value="Enviar">
+    </form>
+
+</body>
+</html>

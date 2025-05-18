@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="borrarNodos.js"></script>
+</head>
+<body>
+    <div id="capa">Div1</div>
+    <p id="texto">Voy a ser eliminado</p>
+    <div id="pie">Div2</div>
+    <button onclick="eliminarParrafo()">Eliminar</button>
+
+    <h1>Eliminar elementos de una lista</h1>
+    <ul id="lista1">
+        <li>Tarea 1</li>
+        <li>Tarea 2</li>
+        <li>Tarea 3</li>
+    </ul>
+    <ul id="lista2">
+        <li>Tarea 1</li>
+        <li>Tarea 2</li>
+        <li>Tarea 3</li>
+    </ul>
+
+    <button onclick="eliminarElemento(this)">Eliminar</button>
+    <br>
+    <br>
+    <table border="1" id="tabla">
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+        </tr>
+        <tr>
+            <td>Producto 1</td>
+            <td>10€</td>
+        </tr>
+        <tr>
+            <td>Producto 2</td>
+            <td>20€</td>
+        </tr>
+        <tr>
+            <td>Producto 3</td>
+            <td>30€</td>
+        </tr>
+    </table>
+
+    <button onclick="eliminarFila()">Eliminar fila</button>
+    
+    <form action="" method="get">
+        <p>Input 1: <input type="text" name="input1"></p>
+        <p>Input 2: <input type="text" name="input2"></p>
+        <p>Input 3: <input type="text" name="input3"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p><Button onclick="eliminarEntrada()">Eliminar entrada</Button></p>
+
+</body>
+</html>

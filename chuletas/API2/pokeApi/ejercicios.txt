@@ -1,0 +1,21 @@
+1)  Mostrar una lista con los 10 pokemitos
+    Crear un fichero que realice lo siguiente:
+        Consulta la API y muestra una lista con el nombre de los 10 primeros pokemitos
+        Cada nombre debe aparecer con la primera letra en mayúsc (usar la función ucfirst())
+        Muestra un enlace que redirija a otra página (otro ficherito) para obtener más detalles sobre el pokemitos
+        
+2)  En el fichero detalle_pokemon.php, mostrar la información básica del pokémon (altura, peso y tipo),
+    mostrar la imagen de frente del pokemito y listar sus tipos dentro de una lista
+     (es decir, en cada línea de la lista, un tipo diferente, si tiene un solo tipo sólo aparecerá una línea)
+
+     
+3)  Filtrar pokémon por filtro creando un fichero llamado filtrar_tipo.php que muestre un formulario con
+        un campo de selección para elgir un tipo de pokémon (agua, fuego, veneno, eléctrico y planta).
+        Al seleccionar un tipo, muestra una lista con los pokémon de ese tipo consultando el endpoint adecuado
+        de la API.
+
+4) Mostrar habilidades en el fichero detalle_pokemon.php. Lista todas las habilidades del pokémon y muestra una 
+    breve descripción de cada habilidad (consulta en endpoint para la descripción)
+
+5) LA POKEDEX:
+    Muestra los 20 primeros pokémons con sus imágenes. Cada pokémon debe ser un enlace a su página de detalles.

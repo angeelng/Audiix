@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2</title>
+    <script src="miScript.js"></script>
+    <style>
+        .estilo1{
+            color: rgb(0, 0, 255);
+            background-color: "white";
+        }
+
+        .estilo2{
+            color: white;
+            background-color: black;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios" id="servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+    <button onclick="actualizarURL()">Actualizar URLS</button>
+    <button onclick="resaltarServicios()">Resaltar Servicios</button>
+
+    <h1>Ejercicio 2</h1>
+    <p class="parrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, enim dolor asperiores odio nulla, consequatur quae magnam consectetur aut in quaerat. Reiciendis cupiditate repudiandae ipsam inventore perferendis. Magni, distinctio atque?
+    </p>
+    <button onclick="cambiarClase()">Cambiar clase</button>
+    <button onclick="cambiarColorTexto()">Cambiar color de texto</button>
+
+    <h1>Ejercicio 3</h1>
+
+    <table id="tabla" border="1" width="300px" height="200px">
+        <tr>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+        </tr>
+        <tr>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+        </tr>
+        <tr>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+            <td onclick="cambiarFrase(this)">Pendiente</td>
+        </tr>
+    </table>
+
+    <h1>Ejercicio 4</h1>
+    <img src="Fotos/CSS.png" alt="" width="300px" height="300px" style="display: block;">
+    <img src="Fotos/HTML.png" alt="" width="300px" height="300px" style="display: none;">
+    <img src="Fotos/JS.png" alt="" width="300px" height="300px" style="display: none;">
+    <img src="Fotos/PHP.png" alt="" width="300px" height="300px" style="display: none;">
+    <img src="Fotos/Python.png" alt="" width="300px" height="300px" style="display: none;">
+    <button onclick="anteriorImagen()">Anterior</button>
+    <button onclick="siguienteImagen()">Siguiente</button>
+    
+</body>
+</html>

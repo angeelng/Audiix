@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="miScripts2.js"></script>
+    <style>
+
+        .estiloOriginal{
+            color: black;
+            font-size: 16px;
+        }
+
+        .nuevoEstilo{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Primer párrafo</p>
+    <p>Segundo párrafo</p>
+    <p>Tercer párrafo</p>
+    <p>Cuarto párrafo</p>
+
+    <input type="text" name="usuario" placeholder="Introduce tu nombre">
+    <button onclick="mostrarNombre()">Mostrar nombre</button>
+
+    <nav>
+        <a href="#" class="nav-link" id="link">Primer enlace</a>
+        <a href="#" class="nav-link">Segundo enlace</a>
+        <a href="#" class="nav-link">Tercer enlace</a>
+    </nav>
+
+    <div>
+        <p>Esto es un párrafo dentro de un div</p>
+        <p>Este es el segundo párrafo</p>
+    </div>
+
+    <table id="miTabla" with="300px" height="200px" border="2px">
+        <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+        </tr>
+    </table>
+
+    <p>
+        <button onclick="modificarTabla()">Modificar Tabla</button>
+    </p>
+
+    <p id="parra">
+        Soy un parrafo alineado a la izquierda por defecto
+    </p>
+
+    <!-------------------------------------->
+    <p id="text-paragraph"><b>Este es el texto original</b></p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+    <p id="source-paragraph"><b>Este es el cotenido que se va a copiar</b></p>
+    <button onclick="copiarTexto()">Copiar texto</button>
+    <p id="destination-paragraph">Aquí aparecerá el contenido copiado</p>
+
+    <!-------------------------------------->
+
+    <p id="parrafo" class="estiloOriginal">Este es el párrafo con estilo original</p>
+    <button onclick="cambiarClase()">Cambiar estilo</button>
+
+    <p onclick="cambiarTexto(this)">Haz click en este párrafo</p>
+    <p onclick="cambiarTexto(this)">Haz click en este párrafo también</p>
+    <p onclick="cambiarTexto(this)">Intenta hacer click aquí</p>
+</body>
+</html>
